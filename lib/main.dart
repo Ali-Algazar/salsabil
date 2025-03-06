@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'core/routes/app_routes.dart';
 import 'core/theme/app_theme.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: AppRoutes.onGenerateRoute,
       theme: AppTheme.lightTheme,
     );
   }
