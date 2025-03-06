@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/assets/images/app_images.dart';
 import '../../../../../core/assets/svg/app_svg.dart';
@@ -44,7 +45,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             ),
           ),
           Image.asset(
-            height: 260,
+            height: 260.h,
             AppImages.logoSplash,
           ),
         ],

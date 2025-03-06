@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/routes/app_routes.dart';
 import 'core/theme/app_theme.dart';
@@ -12,10 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: AppRoutes.onGenerateRoute,
-      theme: AppTheme.lightTheme,
+    return ScreenUtilInit(
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: AppRoutes.onGenerateRoute,
+        theme: AppTheme.lightTheme,
+      ),
     );
   }
 }
